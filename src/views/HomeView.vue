@@ -2,6 +2,7 @@
 import { RouterLink } from 'vue-router'
 import LinkCard from '@/components/LinkCard.vue'
 import ThemeToggle from '@/components/ThemeToggle.vue'
+import profilePhoto from '@/assets/picture-of-me.JPG'
 
 const links = [
   { label: 'Portfolio', url: 'https://example.com', icon: '🎨' },
@@ -16,7 +17,7 @@ const links = [
     <ThemeToggle />
     <div class="card">
       <div class="avatar">
-        <span class="avatar-placeholder">SC</span>
+        <img :src="profilePhoto" alt="Scott Conover" />
       </div>
       <h1 class="name">Scott Conover</h1>
       <p class="tagline">Designer &amp; Developer</p>
@@ -71,10 +72,10 @@ const links = [
   transition: background-color var(--transition), border-color var(--transition);
 }
 
-.avatar-placeholder {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--text-muted);
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .name {

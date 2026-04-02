@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import profilePhoto from '@/assets/picture-of-me.JPG'
 </script>
 
 <template>
   <div class="about-page">
     <div class="card">
       <RouterLink to="/" class="back-link">← Back</RouterLink>
+      <div class="photo">
+        <img :src="profilePhoto" alt="Scott Conover" />
+      </div>
       <h1>About Me</h1>
       <p>
         Hi, I'm Scott Conover — a designer and developer who loves building
@@ -37,6 +41,21 @@ import { RouterLink } from 'vue-router'
   padding: 2.5rem 2rem;
   width: 100%;
   transition: background-color var(--transition);
+}
+
+.photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.5rem;
+  border: 3px solid var(--btn-border);
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 h1 {
