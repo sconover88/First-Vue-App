@@ -18,7 +18,7 @@ defineProps<{
     class="text-none"
     rounded="lg"
   >
-    <v-icon start>{{ icon }}</v-icon>
+    <v-icon start class="mr-2">{{ icon }}</v-icon>
     {{ label }}
   </v-btn>
 </template>
