@@ -15,10 +15,31 @@ defineProps<{
     color="surface-variant"
     block
     size="large"
-    class="text-none"
+    class="text-none link-btn"
     rounded="lg"
   >
-    <v-icon start class="mr-2">{{ icon }}</v-icon>
-    {{ label }}
+    <div class="link-btn-content">
+      <v-icon size="20" class="link-btn-icon">{{ icon }}</v-icon>
+      <span>{{ label }}</span>
+    </div>
   </v-btn>
 </template>
+
+<style scoped>
+.link-btn :deep(.v-btn__content) {
+  width: 100%;
+}
+
+.link-btn-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 25%;
+}
+
+.link-btn-icon {
+  width: 24px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+</style>

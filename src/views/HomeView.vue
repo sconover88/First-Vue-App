@@ -58,11 +58,13 @@ const links = [
               color="surface-variant"
               block
               size="large"
-              class="text-none"
+              class="text-none about-btn"
               rounded="lg"
             >
-              <v-icon start>mdi-account</v-icon>
-              About Me
+              <div class="about-btn-content">
+                <v-icon size="20" class="about-btn-icon">mdi-account</v-icon>
+                <span>About Me</span>
+              </div>
             </v-btn>
           </div>
         </v-card>
@@ -70,3 +72,22 @@ const links = [
     </v-row>
   </v-container>
 </template>
+
+<style scoped>
+.about-btn :deep(.v-btn__content) {
+  width: 100%;
+}
+
+.about-btn-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 25%;
+}
+
+.about-btn-icon {
+  width: 24px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+</style>
