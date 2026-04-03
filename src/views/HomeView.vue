@@ -82,7 +82,7 @@ const links = [
   display: flex;
   align-items: center;
   width: 100%;
-  padding-left: 25%;
+  padding-left: 33%;
 }
 
 .about-btn-icon {
